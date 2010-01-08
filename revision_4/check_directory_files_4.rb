@@ -1,8 +1,29 @@
 #!/usr/bin/env ruby
 
+# =============================================================================
+# check_directory_files_4.rb
+#
+# This file is released into the public domain with no warranties whatsoever, 
+# express or implied.
+#
+# You are free to use it however you dare!
+# =============================================================================
+
+# ###################################################################
+# Fourth revision
+# 
+# Changes:
+#   Alternative method of counting files.  Instead of using Ruby, we
+#   execute a shell command ("ls -aL | wc -l") and grab the output
+#   and use that.
+#
+#   Probably not the most optimal way to solve this problem, but 
+#   does demonstrate how to do it.
+#
+# ###################################################################
+
 require 'optparse'
 
-# Parse command line parameters
 # Parse command line parameters
 
 def parse_opts(options)
@@ -48,7 +69,7 @@ path = options[:dir]
 puts "Checking Directory #{path}"
 
 # Actually count files in directory
-count = `ls -al #{path}| wc -l`.lstrip.chomp.to_i
+count = `ls -aL #{path}| wc -l`.lstrip.chomp.to_i
 
 
 # Print out results

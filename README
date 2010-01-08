@@ -1,0 +1,52 @@
+These are the scripts I used in my "Elementary Ruby Scripting for Sysadmins" Voonami Luau Presentation.
+
+The initial script that all the others are based from, is one written by one of the Voonami NOC staff members as a learning exercise.  It checks a specified directory and issues either a warning or a critical error if the number of files in that directory exceeds a given threshold.
+
+initial_revision
+
+  Potential problems:
+    Parameter parsing is non-standard, and just a little fragile
+    File counting loop works, but there may be better ways to do it
+    Minor logic error in the output section
+
+revision_1
+
+  Changes:
+    Use OptionParser module
+    Fix minor logic error in output section
+
+  Problems
+    File counting loop can still be tightened up
+
+  minor revision a
+  
+    Changes:
+      Move option parsing to a method
+      
+  minor revision b
+  
+    Changes:
+      Tighten up file counting loop
+      
+revision_2
+
+  Changes:
+    Change file counting loop to "collect"
+  
+  Problems:
+    Counts everything in the directory, even other directories
+  
+revision_3
+
+  Changes:
+    Change file counting loop to select, to account for directories
+
+revision_4
+
+  Changes:
+    Alternative method of counting files.  Instead of using Ruby, we
+    execute a shell command ("ls -aL | wc -l") and grab the output
+    and use that.
+
+    Probably not the most optimal way to solve this problem, but 
+    does demonstrate how to do it.

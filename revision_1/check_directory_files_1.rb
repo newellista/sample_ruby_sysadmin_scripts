@@ -1,5 +1,26 @@
 #!/usr/bin/env ruby
 
+# =============================================================================
+# check_directory_files_1.rb
+#
+# This file is released into the public domain with no warranties whatsoever, 
+# express or implied.
+#
+# You are free to use it however you dare!
+# =============================================================================
+
+# ###############################################
+# First revision
+# 
+# Changes:
+#   Use OptionParser module
+#   Fix minor logic error in output section
+#
+# Problems
+#   File counting loop can still be tightened up
+# 
+# ###############################################
+
 require 'optparse'
 
 options = {}

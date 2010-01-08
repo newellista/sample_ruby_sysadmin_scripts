@@ -1,5 +1,24 @@
 #!/usr/bin/ruby
 
+# =============================================================================
+# check_directory_files.rb
+#
+# This file is released into the public domain with no warranties whatsoever, 
+# express or implied.
+#
+# You are free to use it however you dare!
+# =============================================================================
+
+
+# ####################################################################
+#
+# Initial script
+# Potential problems:
+#   Parameter parsing is non-standard, and just a little fragile
+#   File counting loop works, but there may be better ways to do it
+#   Minor logic error in the output section
+#
+# ####################################################################
 
 if ARGV.count < 1
  puts "Usage: check_directory_files.rb -d \"dirname\" -c \"critical\" -w \"warning\""

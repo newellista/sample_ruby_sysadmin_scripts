@@ -1,7 +1,26 @@
 #!/usr/bin/env ruby
 
+# =============================================================================
+# check_directory_files_2.rb
+#
+# This file is released into the public domain with no warranties whatsoever, 
+# express or implied.
+#
+# You are free to use it however you dare!
+# =============================================================================
+
+# ##############################################################
+# Second revision
+# 
+# Changes:
+#   Change file counting loop to "collect"
+#
+# Problems:
+#   Counts everything in the directory, even other directories
+#
+# ##############################################################
+
 require 'optparse'
-require 'pp'
 
 # Parse command line parameters
 

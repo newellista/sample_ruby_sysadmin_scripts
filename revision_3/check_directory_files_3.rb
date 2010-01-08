@@ -1,8 +1,23 @@
 #!/usr/bin/env ruby
 
-require 'optparse'
-require 'pp'
+# =============================================================================
+# check_directory_files_3.rb
+#
+# This file is released into the public domain with no warranties whatsoever, 
+# express or implied.
+#
+# You are free to use it however you dare!
+# =============================================================================
 
+# ###################################################################
+# Third revision
+# 
+# Changes:
+#   Change file counting loop to select, to account for directories
+#
+# ###################################################################
+
+require 'optparse'
 
 def build_fullpath(path, filename)
   "#{path}/#{filename}"

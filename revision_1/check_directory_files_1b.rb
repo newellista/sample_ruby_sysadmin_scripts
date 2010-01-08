@@ -1,5 +1,23 @@
 #!/usr/bin/env ruby
 
+# =============================================================================
+# check_directory_files_1b.rb
+#
+# This file is released into the public domain with no warranties whatsoever, 
+# express or implied.
+#
+# You are free to use it however you dare!
+# =============================================================================
+
+
+# ###########################################
+# First revision, minor b
+# 
+# Changes:
+#   Tighten up file counting loop
+#
+# ###########################################
+
 require 'optparse'
 
 # Parse command line parameters

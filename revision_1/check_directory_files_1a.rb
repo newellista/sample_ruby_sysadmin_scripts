@@ -1,5 +1,22 @@
 #!/usr/bin/env ruby
 
+# =============================================================================
+# check_directory_files_1a.rb
+#
+# This file is released into the public domain with no warranties whatsoever, 
+# express or implied.
+#
+# You are free to use it however you dare!
+# =============================================================================
+
+# ###########################################
+# First revision, minor a
+# 
+# Changes:
+#   Move option parsing to a method
+#
+# ###########################################
+
 require 'optparse'
 
 # Parse command line parameters
